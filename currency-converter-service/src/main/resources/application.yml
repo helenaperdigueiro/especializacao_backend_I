@@ -1,6 +1,6 @@
 # eureka
 server:
-  port: 8080
+  port: 8081
 
 eureka:
   client:
@@ -10,7 +10,7 @@ eureka:
 # config-server
 spring:
   application:
-    name: account-service
+    name: currency-converter-service
   config:
     import: optional:configserver:http://localhost:8888
 

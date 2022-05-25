@@ -10,18 +10,18 @@ import java.util.Map;
 
 @RestController
 public class AccountServiceController {
-//    @Value("${message}")
-//    private String message;
+    @Value("${message}")
+    private String message;
 //    @Value("${global-message}")
 //    private String globalMessage;
 
-//    @RequestMapping(method = RequestMethod.GET, path = "service")
-//    public Map<String, String> message() {
-//        Map<String, String> response = new HashMap<>();
-//
-//        response.put("message", message);
+    @RequestMapping(method = RequestMethod.GET, path = "service")
+    public Map<String, String> message() {
+        Map<String, String> response = new HashMap<>();
+
+        response.put("message", message);
 //        response.put("global-message", globalMessage);
-//
-//        return response;
-//    }
+
+        return response;
+    }
 }
