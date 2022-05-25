@@ -15,7 +15,7 @@ public class CurrencyConverterController {
     @Autowired
     private CurrencyConverterService currencyConverterService;
 
-    @GetMapping(value = "/value={value}&from={originalCurrency}&to={newCurrency}")
+    @GetMapping("/value={value}&from={originalCurrency}&to={newCurrency}")
     public Double convertCurrency(@PathVariable("value") Double value,
                                   @PathVariable("originalCurrency") String originalCurrency,
                                   @PathVariable("newCurrency") String newCurrency) {
