@@ -1,25 +1,13 @@
-#server:
-#    port: $(PORT:8888)
-#
-#message: configuracao padrao com spring cloud config!
-#
-#spring:
-##    application:
-##        name: ConfigServer
-#    cloud:
-#        config:
-#            server:
-#                git:
-#                    uri: https://github.com/helenaperdigueiro/especializacao_backend_I
-
 server:
   port: 8888
-
 spring:
+  application:
+    name: config-server
   cloud:
     config:
       server:
         git:
           uri: https://github.com/helenaperdigueiro/especializacao_backend_I
-
-message: mensagem do servidor
+          default-label: main
+          search-paths:
+            - 'config-cloud*'

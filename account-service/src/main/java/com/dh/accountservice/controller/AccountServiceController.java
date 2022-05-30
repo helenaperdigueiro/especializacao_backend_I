@@ -10,26 +10,20 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/testando")
 public class AccountServiceController {
-//    @Value("${message}")
-//    private String message;
-////    @Value("${global-message}")
-////    private String globalMessage;
-//
-//    @RequestMapping(method = RequestMethod.GET, path = "service")
-//    public Map<String, String> message() {
-//        Map<String, String> response = new HashMap<>();
-//
-//        response.put("message", message);
-////        response.put("global-message", globalMessage);
-//
-//        return response;
-//    }
+    @Value("${message}")
+    private String message;
+//    @Value("${global-message}")
+//    private String globalMessage;
 
-    @GetMapping()
-    public String testar() {
-        return "Deu certo!!";
+    @RequestMapping(method = RequestMethod.GET, path = "service")
+    public Map<String, String> message() {
+        Map<String, String> response = new HashMap<>();
+
+        response.put("message", message);
+//        response.put("global-message", globalMessage);
+
+        return response;
     }
 
 }

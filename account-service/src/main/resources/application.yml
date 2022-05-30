@@ -1,17 +1,15 @@
-# eureka
-server:
-  port: 8080
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
+## eureka
+#server:
+#  port: 8080
+#
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka/
 
 # config-server
 spring:
   application:
-    name: account-service
+    name: dh-transaction-service
   config:
     import: optional:configserver:http://localhost:8888
-
-message: mensagem do servico
