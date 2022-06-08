@@ -20,10 +20,10 @@
       <module name="biblioteca" target="11" />
       <module name="configServer" target="11" />
       <module name="eureka" target="11" />
-      <module name="gateway" target="11" />
+      <module name="gateway" target="${java.version}" />
       <module name="jogos" target="11" />
-      <module name="musica" target="11" />
-      <module name="playlist" target="11" />
+      <module name="musica" target="${java.version}" />
+      <module name="playlist" target="${java.version}" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
