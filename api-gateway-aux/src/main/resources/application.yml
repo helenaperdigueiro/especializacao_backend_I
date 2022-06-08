@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: api-gateway-aux
+  cloud:
+    gateway:
+      default-filters: #Filtro por default de todas as requests realizadas ao gateway
+        - name: LogFilter
+      routes:
+        - id: subscriptionRoute
+          uri: lb://SUBSCRIPTION-SERVICE
+          predicates:
+            - Path=/subscription/**
+        - id: courseRoute
+          uri: lb://COURSE-SERVICE
+          predicates:
+            - Path=/course/**
+          filters:
+            - AddRequestHeader=user-request-header, custom-user-request-header
+            - AddResponseHeader=user-response-header, custom-user-response-header
+server:
+  port: 8080
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
