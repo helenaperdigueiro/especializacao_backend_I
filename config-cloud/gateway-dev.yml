@@ -20,3 +20,11 @@ spring:
           uri: lb://PLAYLIST
           predicates:
            - Path=/playlist/**
+        - id: catalogRoute
+          uri: lb://CATALOG
+          predicates:
+           - Path=/catalog/**
+        - id: movieRoute
+          uri: lb://MOVIE
+          predicates:
+           - Path=/movies/**
