@@ -1,0 +1,58 @@
+{
+	"info": {
+		"_postman_id": "44d037c4-c7ae-4e2b-ba11-62161bdc2025",
+		"name": "Avaliacao I Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18474385"
+	},
+	"item": [
+		{
+			"name": "movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8088/catalog/comedia",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"catalog",
+						"comedia"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"Querido, encolhi as crianças\",\r\n        \"genre\": \"comédia\",\r\n        \"urlStream\": \"url\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8087/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
