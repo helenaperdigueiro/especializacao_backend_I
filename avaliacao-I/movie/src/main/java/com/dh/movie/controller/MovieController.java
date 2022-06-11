@@ -4,10 +4,7 @@ import com.dh.movie.model.Movie;
 import com.dh.movie.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,6 +19,12 @@ public class MovieController {
     public ResponseEntity<List<Movie>> findByGenre(@PathVariable String genre) {
         List<Movie> movies = movieService.findByGenre(genre);
         return ResponseEntity.ok(movies);
+    }
+
+    @PostMapping()
+    public ResponseEntity<Movie> saveMovie(@RequestBody Movie movie) {
+        Movie savedMovie = movieService.saveMovie(movie);
+        return ResponseEntity.ok(savedMovie);
     }
 
 }
