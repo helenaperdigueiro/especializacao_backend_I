@@ -28,3 +28,7 @@ spring:
           uri: lb://MOVIE
           predicates:
            - Path=/movies/**
+        - id: userAccountRoute
+          uri: lb://USER-ACCOUNT
+          predicates:
+           - Path=/user-account/**
