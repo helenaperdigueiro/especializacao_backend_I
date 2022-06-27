@@ -6,6 +6,11 @@ spring:
   cloud:
     config:
       profile: dev
+  rabbitmq:
+    username: guest
+    password: guest
+    host: localhost
+    port: 15672
 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -15,3 +20,9 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+
+queue:
+  movie:
+    name: MovieQueue
+
+message: catalog up
