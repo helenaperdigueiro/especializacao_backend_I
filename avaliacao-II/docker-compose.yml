@@ -1,3 +1,6 @@
+#docker-compose build
+#docker-compose up
+
 version: '3.4'
 
 services:
@@ -17,7 +20,7 @@ services:
       - 8761:8761
   
   config-service:
-    build: config-service
+    build: config-server
     container_name: config-service
     depends_on:
       - eureka-service
