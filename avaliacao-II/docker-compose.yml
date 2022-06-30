@@ -1,0 +1,25 @@
+version: '3.4'
+
+services:
+  zipkin-service:
+    image: openzipkin/zipkin:2
+    container_name: zipkin-service
+    ports:
+      - 9411:9411
+
+  eureka-service:
+    #build tem que ser o nome do projeto (caminho para chegar no Dockerfile)
+    build: eureka-server
+    container_name: eureka-service
+    depends_on:
+      - zipkin-service
+    ports:
+      - 8761:8761
+  
+  config-service:
+    build: config-service
+    container_name: config-service
+    depends_on:
+      - eureka-service
+    ports:
+      - 8888:8888
