@@ -1,0 +1,5 @@
+com\example\catalogservice\api\controller\CatalogController.class
+com\example\catalogservice\api\client\MovieServiceClient.class
+com\example\catalogservice\api\controller\TestController.class
+com\example\catalogservice\domain\model\Movie.class
+com\example\catalogservice\CatalogServiceApplication.class
