@@ -11,9 +11,9 @@ spring:
       server:
         git:
           uri: https://github.com/helenaperdigueiro/especializacao_backend_I
-            default-label: main
-            search-paths:
-              - 'cloud-config*'
+          default-label: main
+          search-paths:
+            - 'cloud-config*'
 
 eureka:
   client:

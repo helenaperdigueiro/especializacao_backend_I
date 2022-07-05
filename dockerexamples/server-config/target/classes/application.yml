@@ -10,7 +10,10 @@ spring:
     config:
       server:
         git:
-          uri: ${HOME}/IdeaProjects/digitalhouse/A1B1/zipados/aula16/exercicioguiado/configs
+          uri: https://github.com/helenaperdigueiro/especializacao_backend_I
+          default-label: main
+          search-paths:
+            - 'cloud-config*'
 
 eureka:
   client:
