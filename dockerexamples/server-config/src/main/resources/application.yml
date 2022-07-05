@@ -10,7 +10,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/RenatadsLeal/backend2
+          uri: https://github.com/helenaperdigueiro/especializacao_backend_I
             default-label: main
             search-paths:
               - 'cloud-config*'
