@@ -1,0 +1,9 @@
+C:\Users\Alexander Reis\Downloads\checkpoint2F\checkpoint2F\movie-service\src\main\java\com\example\movieservice\core\config\RabbitMQSenderConfig.java
+C:\Users\Alexander Reis\Downloads\checkpoint2F\checkpoint2F\movie-service\src\main\java\com\example\movieservice\MovieServiceApplication.java
+C:\Users\Alexander Reis\Downloads\checkpoint2F\checkpoint2F\movie-service\src\main\java\com\example\movieservice\core\config\RabbitTemplateConfig.java
+C:\Users\Alexander Reis\Downloads\checkpoint2F\checkpoint2F\movie-service\src\main\java\com\example\movieservice\repository\MovieRepository.java
+C:\Users\Alexander Reis\Downloads\checkpoint2F\checkpoint2F\movie-service\src\main\java\com\example\movieservice\service\MovieServiceImpl.java
+C:\Users\Alexander Reis\Downloads\checkpoint2F\checkpoint2F\movie-service\src\main\java\com\example\movieservice\controller\MovieController.java
+C:\Users\Alexander Reis\Downloads\checkpoint2F\checkpoint2F\movie-service\src\main\java\com\example\movieservice\model\Movie.java
+C:\Users\Alexander Reis\Downloads\checkpoint2F\checkpoint2F\movie-service\src\main\java\com\example\movieservice\service\MovieService.java
+C:\Users\Alexander Reis\Downloads\checkpoint2F\checkpoint2F\movie-service\src\main\java\com\example\movieservice\queue\MovieListener.java

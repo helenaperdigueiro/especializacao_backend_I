@@ -1,0 +1,9 @@
+com\example\movieservice\core\config\RabbitTemplateConfig.class
+com\example\movieservice\controller\MovieController.class
+com\example\movieservice\service\MovieService.class
+com\example\movieservice\model\Movie.class
+com\example\movieservice\core\config\RabbitMQSenderConfig.class
+com\example\movieservice\queue\MovieListener.class
+com\example\movieservice\MovieServiceApplication.class
+com\example\movieservice\repository\MovieRepository.class
+com\example\movieservice\service\MovieServiceImpl.class
