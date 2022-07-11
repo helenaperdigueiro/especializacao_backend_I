@@ -1,0 +1,104 @@
+version: '3.2'
+
+services:
+  database:
+    image: mysql
+    restart: always
+    container_name: database
+    environment:
+      MYSQL_DATABASE: 'movie'
+      MYSQL_USER: 'helena1'
+      MYSQL_PASSWORD: 'helena2'
+      MYSQL_ROOT_PASSWORD: 'helena3'
+    ports:
+      - "3306:3306"
+    volumes:
+      - db-mysql-volume:/var/lib/mysql
+    networks:
+      - host
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - 5672:5672
+      - 15672:15672
+    networks:
+      - host
+
+  eureka-server:
+    build: eureka-server
+    container_name: eureka-server
+    ports:
+      - 8761:8761
+    networks:
+      - host
+
+  config-server:
+    build: config-server
+    container_name: config-server
+    depends_on:
+      - eureka-server
+    ports:
+      - 8888:8888
+    networks:
+      - host
+    links:
+      - eureka-server
+
+  movie:
+    build: movie
+    container_name: movie
+    depends_on:
+      - config-server
+    ports:
+      - 8087:8087
+    networks:
+      - host
+
+  serie:
+    build: serie
+    container_name: serie
+    depends_on:
+      - config-server
+    ports:
+      - 8089:8089
+    networks:
+      - host
+
+  catalog:
+    build: catalog
+    container_name: catalog
+    depends_on:
+      - config-server
+      - movie
+    ports:
+      - 8088:8088
+    networks:
+      - host
+
+  gateway:
+    build: gateway 
+    container_name: gateway
+    depends_on:
+      - catalog
+      - config-server
+    ports:
+      - 8080:8080
+    networks:
+      - host
+
+  zipkin:
+    container_name: zipkin
+    image: openzipkin/zipkin
+    ports:
+      - "9411:9411"
+    networks:
+      - host
+
+networks:
+  host:
+    driver: bridge
+
+volumes:
+  db-mysql-volume: {}

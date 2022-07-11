@@ -1,0 +1,31 @@
+server:
+  port: 8087
+spring:
+  application:
+    name: movie
+  config:
+    import: optional:configserver:http://config-server:8888
+#  cloud:
+#    config:
+#      profile: dev
+
+  zipkin:
+    base-url: http://zipkin:9411/
+
+  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://database:3306/movie?createDatabaseIfNotExist=true&serverTimezone=UTC-3&useSSl=false
+    username: helena1
+    password: helena2
+  jpa:
+    hibernate:
+      ddl-auto: update
+eureka:
+  instance:
+    prefer-ip-address: true
+#    hostname: eureka-server
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://eureka-server:8761/eureka/

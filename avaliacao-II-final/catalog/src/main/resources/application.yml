@@ -1,0 +1,43 @@
+server:
+  port: 8088
+spring:
+  application:
+    name: catalog
+  config:
+    import: optional:configserver:http://config-server:8888
+#  cloud:
+#    config:
+#      profile: dev
+  zipkin:
+    base-url: http://zipkin:9411/
+
+  #  rabbitmq:
+  #    username: guest
+  #    password: guest
+  #    host: rabbitmq
+  #    port: 5672
+
+  datasource:
+    url: jdbc:mysql://database:3306/movie?createDatabaseIfNotExist=true&serverTimezone=UTC-3&useSSl=false
+    username: helena1
+    password: helena2
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  #    hostname: eureka-server
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://eureka-server:8761/eureka/
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 160000000
+        readTimeout: 160000000

@@ -1,0 +1,37 @@
+server:
+  port: 8089
+spring:
+  application:
+    name: serie
+  config:
+    import: optional:configserver:http://config-server:8888
+
+#  data:
+#    mongodb:
+#      url: mongodb://helena1:helena2@mongo:27017/seriesDb
+##      url: mongodb://YourUsername:YourPasswordHere@127.0.0.1:27017/your-database-name
+#      host: mongo
+#      port: 27017
+#      database: seriesDb
+
+  zipkin:
+    base-url: http://zipkin:9411/
+
+  datasource:
+    #    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://database:3306/movie?createDatabaseIfNotExist=true&serverTimezone=UTC-3&useSSl=false
+    username: helena1
+    password: helena2
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  #    hostname: eureka-server
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://eureka-server:8761/eureka/

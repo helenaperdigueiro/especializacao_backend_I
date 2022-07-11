@@ -1,0 +1,86 @@
+{
+	"info": {
+		"_postman_id": "4f44d0de-9e1f-4633-8ab1-df7392a2ae30",
+		"name": "Especializacao Backend I",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18474385"
+	},
+	"item": [
+		{
+			"name": "movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"A Múmia 2\",\r\n        \"genre\": \"aventura\",\r\n        \"urlStream\": \"url_romance_meuprimeiroamor2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8087/movies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "serie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"Dexter 5\",\r\n        \"genre\": \"aventura\",\r\n        \"urlStream\": \"url_serie\",\r\n        \"seasons\": 5,\r\n        \"chapters\": 40\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8089/series",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"series"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "genres",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8088/catalog/aventura",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"catalog",
+						"aventura"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

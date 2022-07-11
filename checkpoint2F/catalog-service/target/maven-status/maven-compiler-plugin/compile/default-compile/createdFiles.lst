@@ -1,7 +1,0 @@
-com\example\catalogservice\core\config\RabbitTemplateConfig.class
-com\example\catalogservice\service\CatalogService.class
-com\example\catalogservice\service\MovieFeign.class
-com\example\catalogservice\CatalogServiceApplication.class
-com\example\catalogservice\core\config\RabbitMQSenderConfig.class
-com\example\catalogservice\controller\CatalogController.class
-com\example\catalogservice\service\CatalogServiceImpl.class
